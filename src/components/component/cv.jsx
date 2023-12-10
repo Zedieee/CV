@@ -95,7 +95,7 @@ function CV() {
             </div>
             <div className="mt-6">
             <Button className="w-full" variant="outline">
-            <a href="/CV.pdf" download>
+            <a href="/CV Brian H Gargallo Carnalla.pdf" download>
                   Download CV
                 </a>
               </Button>
