@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-
+import { Analytics } from "@vercel/analytics/next"
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.className} bg-github-bg text-github-text font-display antialiased min-h-screen flex flex-col items-center py-16 px-6`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )
