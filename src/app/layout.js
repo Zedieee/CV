@@ -4,17 +4,32 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Brian Gargallo',
+  title: 'Brian Hermam Gargallo Carnalla - Professional Experience Portfolio',
   description: 'Brian Gargallo CV and Portfolio',
   icons: {
-    icon: 'icon.svg' , // /public path
+    icon: 'icon.svg', // /public path
+  },
+  alternates: {
+    languages: {
+      en: 'https://www.brian-g.com/?lang=en',
+      es: 'https://www.brian-g.com/?lang=es',
+      'x-default': 'https://www.brian-g.com/?lang=en',
+    },
   },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+      </head>
+      <body className={`${inter.className} bg-github-bg text-github-text font-display antialiased min-h-screen flex flex-col items-center py-16 px-6`}>
+        {children}
+      </body>
     </html>
   )
 }
