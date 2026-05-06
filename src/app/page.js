@@ -46,7 +46,7 @@ export default async function Home({ searchParams }) {
                         Brian Hermam Gargallo Carnalla
                     </h2>
                     <p className="text-sm font-mono text-github-muted">
-                        Mexico 🇲🇽 · +52 777 591 9411
+                        Mexico 🇲🇽 
                     </p>
                     <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
                         {t.heroTitle}
