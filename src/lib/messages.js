@@ -11,6 +11,11 @@ export const MESSAGES = {
         freelanceSubtitle: 'Freelance / Self-employed',
         freelanceDescription:
             'I develop web applications and digital solutions for independent clients, from requirements definition through delivery and maintenance. I design and implement interfaces with Next.js, Astro, Tailwind CSS and TypeScript; integrate APIs and backend services with Django, Supabase and PostgreSQL; build authentication systems, dashboards and data flows, and work with digital documents (PDF, DOCX, LaTeX).',
+        selectedWorkEyebrow: 'Selected work',
+        selectedWorkTitle: 'Recent launches and production work',
+        selectedWorkDescription:
+            'A curated set of recent web products, interactive experiences and client-facing launches.',
+        viewProjectsCta: 'View featured projects',
         tiPeriod: 'Oct 2023 – Oct 2024 · Jiutepec, Mor.',
         tiDescription:
             'I developed Python programs for bulk listings on Mercado Libre and worked on a similar project for Amazon. I led a centralization project to improve control over processes, changes and updates for warehouses and products. I used Django, jQuery and MongoDB to generate statistics and reports for sellers and improve response times to customers, and integrated with Odoo to update stock and availability for more than 280k listings. I also provided IT infrastructure support (workstations, email and Microsoft 365 accounts, switches and hardware).',
@@ -25,8 +30,27 @@ export const MESSAGES = {
         softSkillCommunication: 'Effective communication',
         softSkillWebDev: 'Web and software development',
         projectsTitle: 'Featured projects',
-        endOfSeasonDescription: 'Personal web project deployed to production.',
-        twitchDescription: 'Interactive web project deployed to production.',
+        projectsShowcaseEyebrow: 'Project showcase',
+        projectsShowcaseTitle: 'Selected projects built for production',
+        projectsShowcaseDescription:
+            'A focused selection of recent work across product interfaces, interactive experiences and production-ready web platforms.',
+        moreProjectsCta: 'More projects on GitHub',
+        liveProjectCta: 'Live project',
+        githubProjectCta: 'GitHub profile',
+        projectKindProduct: 'Product',
+        projectKindExperience: 'Experience',
+        projectKindPlatform: 'Platform',
+        projectKindInteractive: 'Interactive',
+        projectDescriptions: {
+            'End of Season Tracker':
+                'Production-oriented tracker interface focused on clarity, fast browsing and polished user-facing workflows.',
+            'Nuestra Historia':
+                'Interactive storytelling site designed as a more emotional, immersive and highly visual browsing experience.',
+            CAPAE:
+                'Web platform presentation built to communicate information clearly with a structured and accessible interface.',
+            'One Trick Project':
+                'Brand-forward interactive website with a stronger emphasis on presentation, motion and memorable UI moments.',
+        },
         educationTitle: 'Education, certifications & languages',
         degreePeriod:
             'Instituto Tecnológico de Zacatepec · Jan 2019 – Jul 2023',
@@ -50,6 +74,11 @@ export const MESSAGES = {
         freelanceSubtitle: 'Freelance / Independiente',
         freelanceDescription:
             'Desarrollo aplicaciones web y soluciones digitales para clientes independientes, desde la definición de requerimientos hasta la entrega y mantenimiento. Diseño e implementación de interfaces con Next.js, Astro, Tailwind CSS y TypeScript; integración de APIs y servicios backend con Django, Supabase y PostgreSQL; creación de sistemas de autenticación, dashboards y manejo de datos, así como conversión y gestión de documentos digitales (PDF, DOCX, LaTeX).',
+        selectedWorkEyebrow: 'Proyectos seleccionados',
+        selectedWorkTitle: 'Lanzamientos recientes y trabajo en producción',
+        selectedWorkDescription:
+            'Una selección curada de productos web recientes, experiencias interactivas y proyectos publicados para clientes.',
+        viewProjectsCta: 'Ver proyectos destacados',
         tiPeriod: 'oct 2023 – oct 2024 · Jiutepec, Mor.',
         tiDescription:
             'Desarrollo de programas en Python para publicaciones masivas en Mercado Libre y proyecto similar para Amazon. Liderazgo de un proyecto de centralización para mejorar el control de procesos, modificaciones y actualizaciones de almacenes y productos. Trabajo con Django, jQuery y MongoDB para generar estadísticas e informes para vendedores y mejorar tiempos de respuesta a clientes, además de integraciones con Odoo para actualizar existencias y disponibilidad de más de 280k publicaciones. Soporte de infraestructura de TI (equipos, cuentas de correo y Microsoft 365, switches y hardware).',
@@ -64,8 +93,27 @@ export const MESSAGES = {
         softSkillCommunication: 'Comunicación efectiva',
         softSkillWebDev: 'Desarrollo web y de software',
         projectsTitle: 'Proyectos destacados',
-        endOfSeasonDescription: 'Proyecto web personal desplegado en producción.',
-        twitchDescription: 'Proyecto web interactivo desplegado en producción.',
+        projectsShowcaseEyebrow: 'Showcase de proyectos',
+        projectsShowcaseTitle: 'Proyectos seleccionados construidos para producción',
+        projectsShowcaseDescription:
+            'Una selección enfocada de trabajo reciente entre interfaces de producto, experiencias interactivas y plataformas web listas para producción.',
+        moreProjectsCta: 'Más proyectos en GitHub',
+        liveProjectCta: 'Ver proyecto',
+        githubProjectCta: 'Perfil de GitHub',
+        projectKindProduct: 'Producto',
+        projectKindExperience: 'Experiencia',
+        projectKindPlatform: 'Plataforma',
+        projectKindInteractive: 'Interactivo',
+        projectDescriptions: {
+            'End of Season Tracker':
+                'Interfaz de seguimiento orientada a producción, enfocada en claridad, navegación rápida y flujos pulidos para usuarios.',
+            'Nuestra Historia':
+                'Sitio de storytelling interactivo diseñado como una experiencia de navegación más emocional, inmersiva y visual.',
+            CAPAE:
+                'Presentación de plataforma web construida para comunicar información con una interfaz estructurada y accesible.',
+            'One Trick Project':
+                'Sitio interactivo con enfoque de marca, mayor peso visual y atención en presentación, movimiento y detalles de UI.',
+        },
         educationTitle: 'Educación, certificaciones & idiomas',
         degreePeriod:
             'Instituto Tecnológico de Zacatepec · ene 2019 – jul 2023',
