@@ -11,10 +11,10 @@ export const MESSAGES = {
         freelanceSubtitle: 'Freelance / Self-employed',
         freelanceDescription:
             'I develop web applications and digital solutions for independent clients, from requirements definition through delivery and maintenance. I design and implement interfaces with Next.js, Astro, Tailwind CSS and TypeScript; integrate APIs and backend services with Django, Supabase and PostgreSQL; build authentication systems, dashboards and data flows, and work with digital documents (PDF, DOCX, LaTeX).',
-        selectedWorkEyebrow: 'Selected work',
-        selectedWorkTitle: 'Recent launches and production work',
+        selectedWorkEyebrow: 'Highlighted work',
+        selectedWorkTitle: 'Recent launches I am proud of',
         selectedWorkDescription:
-            'A curated set of recent web products, interactive experiences and client-facing launches.',
+            'A small selection of recent web products, interactive experiences and live launches.',
         viewProjectsCta: 'View featured projects',
         tiPeriod: 'Oct 2023 – Oct 2024 · Jiutepec, Mor.',
         tiDescription:
@@ -31,7 +31,7 @@ export const MESSAGES = {
         softSkillWebDev: 'Web and software development',
         projectsTitle: 'Featured projects',
         projectsShowcaseEyebrow: 'Project showcase',
-        projectsShowcaseTitle: 'Selected projects built for production',
+        projectsShowcaseTitle: 'A few projects that represent my work well',
         projectsShowcaseDescription:
             'A focused selection of recent work across product interfaces, interactive experiences and production-ready web platforms.',
         moreProjectsCta: 'More projects on GitHub',
@@ -74,10 +74,10 @@ export const MESSAGES = {
         freelanceSubtitle: 'Freelance / Independiente',
         freelanceDescription:
             'Desarrollo aplicaciones web y soluciones digitales para clientes independientes, desde la definición de requerimientos hasta la entrega y mantenimiento. Diseño e implementación de interfaces con Next.js, Astro, Tailwind CSS y TypeScript; integración de APIs y servicios backend con Django, Supabase y PostgreSQL; creación de sistemas de autenticación, dashboards y manejo de datos, así como conversión y gestión de documentos digitales (PDF, DOCX, LaTeX).',
-        selectedWorkEyebrow: 'Proyectos seleccionados',
-        selectedWorkTitle: 'Lanzamientos recientes y trabajo en producción',
+        selectedWorkEyebrow: 'Trabajos destacados',
+        selectedWorkTitle: 'Lanzamientos recientes que me representan bien',
         selectedWorkDescription:
-            'Una selección curada de productos web recientes, experiencias interactivas y proyectos publicados para clientes.',
+            'Una pequeña selección de productos web recientes, experiencias interactivas y lanzamientos que ya están en línea.',
         viewProjectsCta: 'Ver proyectos destacados',
         tiPeriod: 'oct 2023 – oct 2024 · Jiutepec, Mor.',
         tiDescription:
@@ -93,8 +93,8 @@ export const MESSAGES = {
         softSkillCommunication: 'Comunicación efectiva',
         softSkillWebDev: 'Desarrollo web y de software',
         projectsTitle: 'Proyectos destacados',
-        projectsShowcaseEyebrow: 'Showcase de proyectos',
-        projectsShowcaseTitle: 'Proyectos seleccionados construidos para producción',
+        projectsShowcaseEyebrow: 'Muestra de proyectos',
+        projectsShowcaseTitle: 'Algunos proyectos que representan bien mi trabajo',
         projectsShowcaseDescription:
             'Una selección enfocada de trabajo reciente entre interfaces de producto, experiencias interactivas y plataformas web listas para producción.',
         moreProjectsCta: 'Más proyectos en GitHub',

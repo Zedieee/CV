@@ -6,6 +6,7 @@ const PROJECTS = [
         url: 'https://endofseasontracker.com/',
         domain: 'endofseasontracker.com',
         kind: 'product',
+        image: '/projects/end-of-season-tracker.png',
         tags: ['Next.js', 'Tailwind', 'Supabase'],
         accent: 'from-primary/20 via-primary/5 to-transparent',
     },
@@ -14,6 +15,7 @@ const PROJECTS = [
         url: 'https://nuestra-historia-green.vercel.app/',
         domain: 'nuestra-historia-green.vercel.app',
         kind: 'experience',
+        image: '/projects/nuestra-historia.png',
         tags: ['Next.js', 'Storytelling', 'Responsive UI'],
         accent: 'from-emerald-400/20 via-emerald-400/5 to-transparent',
     },
@@ -22,6 +24,7 @@ const PROJECTS = [
         url: 'https://capae.vercel.app/',
         domain: 'capae.vercel.app',
         kind: 'platform',
+        image: '/projects/capae.png',
         tags: ['Frontend', 'Web Platform', 'Production'],
         accent: 'from-sky-400/20 via-sky-400/5 to-transparent',
     },
@@ -30,6 +33,7 @@ const PROJECTS = [
         url: 'https://onetrickproject.com/',
         domain: 'onetrickproject.com',
         kind: 'interactive',
+        image: '/projects/one-trick-project.png',
         tags: ['Next.js', 'Interactive UI', 'Brand Experience'],
         accent: 'from-violet-400/20 via-violet-400/5 to-transparent',
     },
@@ -419,7 +423,13 @@ export default async function Home({ searchParams }) {
                             className="group overflow-hidden rounded-2xl border border-github-border bg-github-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-black/20"
                         >
                             <div className={`relative overflow-hidden border-b border-github-border bg-gradient-to-br ${project.accent}`}>
-                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_45%)]" />
+                                <img
+                                    src={project.image}
+                                    alt={`${project.name} preview`}
+                                    className="absolute inset-0 h-full w-full object-cover object-top opacity-45 transition-transform duration-500 group-hover:scale-[1.03]"
+                                />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,14,22,0.18)_0%,rgba(10,14,22,0.72)_52%,rgba(10,14,22,0.94)_100%)]" />
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_45%)]" />
                                 <div className="relative flex min-h-[170px] flex-col justify-between p-6">
                                     <div className="flex items-start justify-between gap-4">
                                         <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-white/80">
