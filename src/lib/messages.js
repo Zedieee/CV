@@ -34,9 +34,7 @@ export const MESSAGES = {
         projectsShowcaseTitle: 'A few projects that represent my work well',
         projectsShowcaseDescription:
             'A focused selection of recent work across product interfaces, interactive experiences and production-ready web platforms.',
-        moreProjectsCta: 'More projects on GitHub',
         liveProjectCta: 'Live project',
-        githubProjectCta: 'GitHub profile',
         projectKindProduct: 'Product',
         projectKindExperience: 'Experience',
         projectKindPlatform: 'Platform',
@@ -97,9 +95,7 @@ export const MESSAGES = {
         projectsShowcaseTitle: 'Algunos proyectos que representan bien mi trabajo',
         projectsShowcaseDescription:
             'Una selección enfocada de trabajo reciente entre interfaces de producto, experiencias interactivas y plataformas web listas para producción.',
-        moreProjectsCta: 'Más proyectos en GitHub',
         liveProjectCta: 'Ver proyecto',
-        githubProjectCta: 'Perfil de GitHub',
         projectKindProduct: 'Producto',
         projectKindExperience: 'Experiencia',
         projectKindPlatform: 'Plataforma',

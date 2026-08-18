@@ -393,7 +393,7 @@ export default async function Home({ searchParams }) {
                     <div className="h-px bg-github-border flex-1" />
                 </div>
                 <div className="rounded-2xl border border-github-border bg-github-card/40 p-6 md:p-7">
-                    <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+                    <div className="space-y-2">
                         <div className="space-y-2">
                             <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-primary">
                                 {t.projectsShowcaseEyebrow}
@@ -405,15 +405,6 @@ export default async function Home({ searchParams }) {
                                 {t.projectsShowcaseDescription}
                             </p>
                         </div>
-                        <a
-                            href="https://github.com/Zedieee"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-2 rounded-full border border-github-border bg-github-btn/60 px-4 py-2 text-xs font-mono text-github-text transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:text-white"
-                        >
-                            <span>{t.moreProjectsCta}</span>
-                            <span className="material-symbols-outlined text-sm">arrow_outward</span>
-                        </a>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -473,15 +464,6 @@ export default async function Home({ searchParams }) {
                                     >
                                         <span>{t.liveProjectCta}</span>
                                         <span className="material-symbols-outlined text-sm">open_in_new</span>
-                                    </a>
-                                    <a
-                                        href="https://github.com/Zedieee"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="inline-flex items-center gap-2 text-xs font-mono text-github-muted transition-colors hover:text-white"
-                                    >
-                                        <span>{t.githubProjectCta}</span>
-                                        <span className="material-symbols-outlined text-sm">code</span>
                                     </a>
                                 </div>
                             </div>
