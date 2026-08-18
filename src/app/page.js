@@ -1,10 +1,55 @@
 import { MESSAGES } from '../lib/messages'
 
+const PROJECTS = [
+    {
+        name: 'End of Season Tracker',
+        url: 'https://endofseasontracker.com/',
+        domain: 'endofseasontracker.com',
+        kind: 'product',
+        image: '/projects/end-of-season-tracker.png',
+        tags: ['Next.js', 'Tailwind', 'Supabase'],
+        accent: 'from-primary/20 via-primary/5 to-transparent',
+    },
+    {
+        name: 'Nuestra Historia',
+        url: 'https://nuestra-historia-green.vercel.app/',
+        domain: 'nuestra-historia-green.vercel.app',
+        kind: 'experience',
+        image: '/projects/nuestra-historia.png',
+        tags: ['Next.js', 'Storytelling', 'Responsive UI'],
+        accent: 'from-emerald-400/20 via-emerald-400/5 to-transparent',
+    },
+    {
+        name: 'CAPAE',
+        url: 'https://capae.vercel.app/',
+        domain: 'capae.vercel.app',
+        kind: 'platform',
+        image: '/projects/capae.png',
+        tags: ['Frontend', 'Web Platform', 'Production'],
+        accent: 'from-sky-400/20 via-sky-400/5 to-transparent',
+    },
+    {
+        name: 'One Trick Project',
+        url: 'https://onetrickproject.com/',
+        domain: 'onetrickproject.com',
+        kind: 'interactive',
+        image: '/projects/one-trick-project.png',
+        tags: ['Next.js', 'Interactive UI', 'Brand Experience'],
+        accent: 'from-violet-400/20 via-violet-400/5 to-transparent',
+    },
+]
+
 export default async function Home({ searchParams }) {
     const params = await searchParams
     const lang = params?.lang === 'es' ? 'es' : 'en'
     const isEs = lang === 'es'
     const t = MESSAGES[lang]
+    const kindLabel = {
+        product: t.projectKindProduct,
+        experience: t.projectKindExperience,
+        platform: t.projectKindPlatform,
+        interactive: t.projectKindInteractive,
+    }
 
     return (
         <main className="w-full max-w-3xl space-y-20">
@@ -115,9 +160,51 @@ export default async function Home({ searchParams }) {
                         <p className="text-xs font-mono text-github-muted mb-2">
                                 {t.freelanceSubtitle}
                         </p>
-                            <p className="text-github-muted mb-4 leading-relaxed">
+                        <p className="text-github-muted mb-4 leading-relaxed">
                                 {t.freelanceDescription}
-                            </p>
+                        </p>
+                        <div className="rounded-2xl border border-github-border bg-github-card/70 p-5 shadow-lg shadow-black/10">
+                            <div className="flex flex-col gap-4">
+                                <div className="space-y-2">
+                                    <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-primary">
+                                        {t.selectedWorkEyebrow}
+                                    </p>
+                                    <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                                        <div>
+                                            <h4 className="text-base font-semibold text-white">
+                                                {t.selectedWorkTitle}
+                                            </h4>
+                                            <p className="text-sm text-github-muted max-w-xl">
+                                                {t.selectedWorkDescription}
+                                            </p>
+                                        </div>
+                                        <a
+                                            href={`/?lang=${lang}#projects`}
+                                            className="inline-flex items-center gap-2 text-xs font-mono text-primary hover:text-white transition-colors"
+                                        >
+                                            <span>{t.viewProjectsCta}</span>
+                                            <span className="material-symbols-outlined text-sm">south</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap gap-3">
+                                    {PROJECTS.map((project) => (
+                                        <a
+                                            key={project.name}
+                                            href={project.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="group inline-flex items-center gap-2 rounded-full border border-github-border bg-github-btn/60 px-3 py-2 text-xs font-mono text-github-text transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:text-white"
+                                        >
+                                            <span>{project.name}</span>
+                                            <span className="material-symbols-outlined text-sm text-github-muted group-hover:text-primary transition-colors">
+                                                arrow_outward
+                                            </span>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                         <div className="relative pl-10 timeline-item">
@@ -298,57 +385,90 @@ export default async function Home({ searchParams }) {
                 </div>
             </section>
 
-            <section className="space-y-6">
+            <section id="projects" className="space-y-6 scroll-mt-10">
                 <div className="flex items-center gap-4">
                     <h2 className="text-sm font-mono font-semibold text-github-muted uppercase tracking-wider">
                         {t.projectsTitle}
                     </h2>
                     <div className="h-px bg-github-border flex-1" />
                 </div>
-                <div className="grid grid-cols-1 gap-6">
-                    <a
-                        className="group block bg-github-card border border-github-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300"
-                        href="https://endofseasontracker.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <div className="flex justify-between items-start mb-3">
-                            <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">
-                                End of Season Tracker
-                            </h3>
-                            <span className="material-symbols-outlined text-github-muted group-hover:text-primary transition-colors">
-                                arrow_outward
-                            </span>
-                        </div>
-                            <p className="text-sm text-github-muted leading-relaxed mb-2">
-                                {t.endOfSeasonDescription}
+                <div className="rounded-2xl border border-github-border bg-github-card/40 p-6 md:p-7">
+                    <div className="space-y-2">
+                        <div className="space-y-2">
+                            <p className="text-[11px] font-mono uppercase tracking-[0.25em] text-primary">
+                                {t.projectsShowcaseEyebrow}
                             </p>
-                        <p className="text-xs font-mono text-primary">
-                            endofseasontracker.com
-                        </p>
-                    </a>
-
-                    <a
-                        className="group block bg-github-card border border-github-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300"
-                        href="https://twitch-wheel-decide.vercel.app/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <div className="flex justify-between items-start mb-3">
-                            <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">
-                                Twitch Wheel Decide
+                            <h3 className="text-2xl font-bold tracking-tight text-white">
+                                {t.projectsShowcaseTitle}
                             </h3>
-                            <span className="material-symbols-outlined text-github-muted group-hover:text-primary transition-colors">
-                                arrow_outward
-                            </span>
-                        </div>
-                            <p className="text-sm text-github-muted leading-relaxed mb-2">
-                                {t.twitchDescription}
+                            <p className="max-w-2xl text-sm leading-relaxed text-github-muted">
+                                {t.projectsShowcaseDescription}
                             </p>
-                        <p className="text-xs font-mono text-primary">
-                            twitch-wheel-decide.vercel.app
-                        </p>
-                    </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    {PROJECTS.map((project, index) => (
+                        <article
+                            key={project.name}
+                            className="group overflow-hidden rounded-2xl border border-github-border bg-github-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl hover:shadow-black/20"
+                        >
+                            <div className={`relative overflow-hidden border-b border-github-border bg-gradient-to-br ${project.accent}`}>
+                                <img
+                                    src={project.image}
+                                    alt={`${project.name} preview`}
+                                    className="absolute inset-0 h-full w-full object-cover object-top opacity-45 transition-transform duration-500 group-hover:scale-[1.03]"
+                                />
+                                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,14,22,0.18)_0%,rgba(10,14,22,0.72)_52%,rgba(10,14,22,0.94)_100%)]" />
+                                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_45%)]" />
+                                <div className="relative flex min-h-[170px] flex-col justify-between p-6">
+                                    <div className="flex items-start justify-between gap-4">
+                                        <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-white/80">
+                                            <span className="h-2 w-2 rounded-full bg-primary" />
+                                            {kindLabel[project.kind]}
+                                        </span>
+                                        <span className="text-xs font-mono text-white/60">
+                                            0{index + 1}
+                                        </span>
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h3 className="text-2xl font-bold text-white">
+                                            {project.name}
+                                        </h3>
+                                        <p className="text-sm font-mono text-white/70">
+                                            {project.domain}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="space-y-5 p-6">
+                                <p className="min-h-[72px] text-sm leading-relaxed text-github-muted">
+                                    {t.projectDescriptions[project.name]}
+                                </p>
+                                <div className="flex flex-wrap gap-2">
+                                    {project.tags.map((tag) => (
+                                        <span
+                                            key={tag}
+                                            className="rounded-md border border-github-border bg-github-btn px-2.5 py-1 text-[11px] font-mono text-github-text"
+                                        >
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className="flex flex-wrap items-center gap-3 pt-1">
+                                    <a
+                                        href={project.url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-2 text-xs font-mono text-primary transition-colors hover:bg-primary hover:text-black"
+                                    >
+                                        <span>{t.liveProjectCta}</span>
+                                        <span className="material-symbols-outlined text-sm">open_in_new</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
             </section>
 
